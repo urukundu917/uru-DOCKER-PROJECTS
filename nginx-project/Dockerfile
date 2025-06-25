@@ -1,3 +1,8 @@
 FROM nginx:alpine
-ENV AUTHOUR="Abhina"
-COPY index.html /usr/share/nginx/html/index.html
+
+ENV AUTHOR="AbhinAv MukundA"
+
+COPY index.html.template /usr/share/nginx/html/index.html.template
+COPY entrypoint.sh /entrypoint.sh
+
+ENTRYPOINT ["/entrypoint.sh"]
